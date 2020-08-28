@@ -181,7 +181,7 @@ if __name__ == "__main__":
     # Results
 
     # Create Brain, then train it
-    lakebrain = brain(env, alpha, gamma, epsilon, text_display=False, gui_display=True)
+    lakebrain = brain(env, alpha, gamma, epsilon, text_display=True, gui_display=False)
     lakebrain.train(iterations, display_increments=500)
 
     # Play with brain
