@@ -4,9 +4,9 @@ Simple reinforcement learning solution to [FrozenLake-v0](https://gym.openai.com
 # Synopsis
 Simple 16x4 table that is updated via q-learning algorithm.
 
-State Space: 16 states
-Action Space: left, down, right, up
-Q-table: Table mapping 16 states to best action for highest cumulative long-term reward.
+State Space: 16 states  
+Action Space: left, down, right, up  
+Q-table: Table mapping 16 states to best action for highest cumulative long-term reward.  
 
 Updated via: Q(state, action) = (1-alpha)Q(state, action) + alpha(reward + gamma(maxQ(next state, all actions))
 alpha = learning rate (0 < alpha < 1)
