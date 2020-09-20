@@ -1,6 +1,5 @@
 import gym, random 
 
-
 class qtable:
     def __init__(self, env, alpha, gamma, epsilon):
         self.env = env
