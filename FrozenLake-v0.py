@@ -60,5 +60,3 @@ episodes = 10000
 qLearn = qtable(env, alpha, gamma, epsilon)
 qLearn.train(episodes)
 qLearn.play()
-
-
