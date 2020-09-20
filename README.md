@@ -1,5 +1,16 @@
 # frozenlake-v0
-This is a Reinforcement Learning solution to the OpenAI Gym environment of the [FrozenLake-v0](https://gym.openai.com/envs/FrozenLake-v0/) through Q-Learning via a simple q_table that is trained to maximize the reward of every action in a discrete action space.
+Simple reinforcement learning solution to [FrozenLake-v0](https://gym.openai.com/envs/FrozenLake-v0/).
 
 # Synopsis
-This is a trivial but insightful implementation of Reinforcement Learning as an introduction to Q-learning for me. I wanted to see the agent's "brain" update in real time to get a solid understanding of what is actually going on. I've run it on Python 3.7 on Windows 10. The gui was an ambitious project while I was on a plane from Colorado to DC, it was never finished.
+Simple 16x4 table that is updated via q-learning algorithm.
+
+State Space: 16 states
+Action Space: left, down, right, up
+Q-table: Table mapping 16 states to best action for highest cumulative long-term reward.
+
+Updated via: Q(state, action) = (1-alpha)Q(state, action) + alpha(reward + gamma(maxQ(next state, all actions))
+alpha = learning rate (0 < alpha < 1)
+gamma = discount factor (0 < gamma < 1), importance of future rewards
+epsilon = rate of divergence from q-table (0 < epsilon < 1)
+
+NOTE: Due to initializing the table to zeros, if either epsilon or the number of training episodes is set too low, the agent may never reach the goal during training which will lead to the qtable being all zeros even after thousands of training episodes. Tweaking the rewards, epsilon greedy strategies, and many other simple solutions can be incorporated to solve this. However, this is a simple environment, and I kept the solution as simple as possible.
