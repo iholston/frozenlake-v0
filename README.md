@@ -1,7 +1,7 @@
 # frozenlake-v0
 Simple reinforcement learning solution to [FrozenLake-v0](https://gym.openai.com/envs/FrozenLake-v0/).
 
-# Synopsis
+## Synopsis
 Simple 16x4 table that is updated via q-learning algorithm.
 
 State Space: 16 states  
